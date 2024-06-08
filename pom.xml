@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.me0x.issue</groupId>
+  <artifactId>camel</artifactId>
+  <version>0.0.0-SNAPSHOT</version>
+
+  <properties>
+    <org.apache.maven.plugins..maven-compiler-plugin..version>3.13.0</org.apache.maven.plugins..maven-compiler-plugin..version>
+
+    <jakarta.servlet....version>6.0.0</jakarta.servlet....version>
+    <org.springframework.boot....version>3.3.0</org.springframework.boot....version>
+    <org.apache.camel.springboot....version>4.6.0</org.apache.camel.springboot....version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${org.apache.maven.plugins..maven-compiler-plugin..version}</version>
+        <configuration>
+          <release>21</release>
+          <showWarnings>true</showWarnings>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${org.springframework.boot....version}</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>${jakarta.servlet....version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${org.springframework.boot....version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-spring-boot-starter</artifactId>
+      <version>${org.apache.camel.springboot....version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-servlet-starter</artifactId>
+      <version>${org.apache.camel.springboot....version}</version>
+    </dependency>
+  </dependencies>
+</project>
