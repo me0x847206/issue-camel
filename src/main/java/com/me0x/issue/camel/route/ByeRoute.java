@@ -12,7 +12,6 @@ public class ByeRoute extends RouteBuilder {
     @Override
     public void configure() {
         onException(RuntimeException.class)
-                .routeGroup("API")
                 .handled(true)
                 .transform()
                 .constant("<message>Exception!</message>");
